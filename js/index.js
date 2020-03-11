@@ -54,3 +54,16 @@ h4.addEventListener('click', () => {
 document.querySelector(".nav-link").addEventListener("click", function (event) {
     event.preventDefault();
 });
+footer.addEventListener('dblclick', event => console.log(event));
+
+//Propagation
+
+const topElement = document.querySelector('header');
+const bottomElement = document.querySelector('.nav-container');
+
+console.log(bottomElement);
+// Prevent Default Nav Links Page Refresh
+bottomElement.addEventListener('click', (event) => {
+    event.stopPropagation();
+    event.target.style.backgroundColor = 'blue';
+});
