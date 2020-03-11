@@ -50,3 +50,7 @@ html.addEventListener('scroll', () => {
 h4.addEventListener('click', () => {
     h4.style.color = 'blue';
 });
+
+document.querySelector(".nav-link").addEventListener("click", function (event) {
+    event.preventDefault();
+});
